@@ -43,28 +43,7 @@ public class PlayerController : MonoBehaviour
         _isGrounded = (hit.collider) ? true : false;
         if (_isGrounded && Input.GetKeyDown(KeyCode.Space))
         {
-            //Jump
-            _isJumping = true;
-            _jumpTimeCounter = _jumpTime;
-         
-        }
-
-        if (Input.GetKey(KeyCode.Space))
-        {
-            if (_jumpTimeCounter > 0)
-            {
-                rb.velocity = new Vector2(rb.velocity.x,_jumpForce);
-                _jumpTimeCounter -= Time.deltaTime;
-            }
-            else
-            {
-                _isJumping = false;
-            }
-        }
-        
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            _isJumping = false;
+            
         }
 
     }
